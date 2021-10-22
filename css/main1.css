@@ -1,0 +1,73 @@
+/* MAIN */
+body {
+  margin:0;
+}
+h2{
+  width: 220px;
+  border: 2px solid red ;
+  background-color: white;
+  color: red;
+  text-align: center;
+  margin-left:43.3%;
+  opacity: 0.8;
+}
+/* top buttons CSS */
+.topnav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 27px;
+  text-decoration: none;
+  font-size: 25px;
+  border-bottom: 5px solid transparent;
+}
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+.topnav a.active {
+  border-bottom: 3px solid red;
+}
+font {
+  padding-left:20%;
+  opacity: 0.5;
+  color: red;
+}
+
+/*slideshow1*/
+.slideshow1 {
+  display: block;
+  margin-left: 20%;
+  width: 400px;
+  float: left;
+}
+.ps1 {
+  width: 400px;
+  margin-left: 20%;
+  margin-right: auto;
+}
+.divs1 {
+  padding-left:200px;
+    float: left;
+}
+
+/*slideshow2*/
+.slideshow2 {
+  display: block;
+  margin-right: 20%;
+  width: 400px;
+  float: right;
+}
+.ps2 {
+  width: 400px;
+  margin-left: auto;
+  margin-right: 20%;
+}
+.divs2 {
+  padding-right:260px;
+    float: right;
+}

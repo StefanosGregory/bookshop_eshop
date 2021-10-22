@@ -1,0 +1,59 @@
+/* MAIN */
+body {
+  margin:0;
+}
+table {
+padding:  10px 220px;
+}
+th,td,tr {
+  border: 2px solid red;
+  background-color: white;
+  padding: 7px;
+  opacity: 0.95;
+  text-align: center;
+}
+li {
+  text-align: left;
+}
+p {
+  text-align: left;
+  width: 370px;
+}
+h2{
+  width: 220px;
+  border: 2px solid red ;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin-left:43.3%;
+  opacity: 0.9;
+}
+/* top buttons CSS */
+.topnav1 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.topnav1 a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 27px;
+  text-decoration: none;
+  font-size: 25px;
+  border-bottom: 5px solid transparent;
+}
+.topnav1 a:hover {
+  border-bottom: 3px solid red;
+}
+.topnav1 a.active {
+  border-bottom: 3px solid red;
+}
+font {
+  padding-left:20%;
+  opacity: 0.5;
+  color: red;
+}
+/*center books*/
+.centerbooks {
+}

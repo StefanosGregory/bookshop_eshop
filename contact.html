@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <link rel="stylesheet"  href="css/contact1.css">
+  </head>
+<body background="backgrounds/contact.jpg">
+<div class="topnav">
+  <a  href="main.html">Home</a>
+  <a href="http://localhost/Π18178/buy1.php">Buy A Product</a>
+  <a href="products.html">Products</a>
+  <a class="active">Contact</a>
+  <a href="http://localhost/Π18178/login.php">Login</a>
+</div><br>
+<div class="location">
+  <form>
+    <legend>Store Location</legend>
+     <ul style="list-style-type:disc">
+    <li><u>Town</u>: Athens</li>
+    <li><u>Address</u>: Paradisou 10</li>
+    <li><u>Post Code</u>: 171717</li>
+  </form>
+</div><br>
+<div class="timetable">
+  <form>
+    <legend>Timetable</legend>
+     <ul style="list-style-type:disc">
+    <li><u>Monday</u>   : 8am-2pm/4pm-8pm</li>
+    <li><u>Tuesday</u>  : 8am-2pm/4pm-8pm</li>
+    <li><u>Wednesday</u>: 8am-3pm</li>
+    <li><u>Thursday</u> : 8am-2pm/4pm-8pm</li>
+    <li><u>Friday</u>   : 8am-2pm/4pm-8pm</li>
+    <li><u>Saturday</u> : 8am-3pm</li>
+    <li><s>Sunday:Close</s></li>
+  </form>
+</div><br>
+<div class="tel">
+  <form>
+    <legend>Telephone Number</legend>
+     <ul style="list-style-type:disc">
+    <li><u>Tel</u>: +30 21010101010</li>
+    <li><u>Fax</u>: 2121102110</li>
+  </form>
+</div><br>
+<div class="sentemail">
+<form onsubmit="event.preventDefault(); required();" name="form1">
+  <legend>Contact Information</legend>
+  <label for="onoma">Name:<sup>*</sup></label>
+  <input class="in1" placeholder="Name" type="text" id="data" name="onoma"><br>
+  <label for="epitheto">Surname:<sup>*</sup></label>
+  <input class="in2" placeholder="Surname" type="text" name="epitheto"><br>
+  <label for="tel">Tel:</label>
+  <input class="in3" placeholder="Tel" type="text" name="tel"><br>
+  <label for="email">Email:<sup>*</sup></label>
+  <input class="in4" placeholder="example@mail.com" type="email" name="email"><br><br>
+  <label for="fylo">Sex:<sup>*</sup></label><br>
+  <input type="radio" name="gender" value="male" checked> Men</input><br>
+  <input type="radio" name="gender" value="female"> Women</input><br>
+  <br>
+  <label for="aitima_erotima">Message:<sup style="font-size:60;">*</sup></label><br>
+  <textarea  name="erotima" rows="5" cols="60"></textarea><br>
+  <input  type="submit" >
+  <input  type="reset" value="Reset">
+  <p align="right">Must inputs! <sup>*</sup></p>
+</form>
+</div>
+
+<div id="popup">
+  <legend>Are you sure you want to send the following email?</legend>
+  <label for="onoma">Name:<sup>*</sup></label>
+  <span id="form_name"></span><br>
+  <label for="epitheto">Surname:<sup>*</sup></label>
+  <span id="form_surname"></span><br>
+  <label for="tel">Tel:</label>
+  <span id="form_phone"></span><br>
+  <label for="email">Email:<sup>*</sup></label>
+  <span id="form_email"></span><br>
+  <label for="fylo">Sex:<sup>*</sup></label>
+  <span id="form_fylo"></span><br>
+  <label for="aitima_erotima">Message:<sup style="font-size:60;">*</sup><br></label>
+  <span id="form_erotima"></span><br><br>
+  <input  type="button" value="Sent" onclick="send_msg();" />
+  <input  type="reset" value="Cancel" onclick="cancel_msg();">
+</div>
+</body>
+<script>
+function required() {
+  var nm = document.form1.onoma.value;
+  ep = document.form1.epitheto.value;
+  em = document.form1.email.value;
+  er = document.form1.erotima.value;
+  tel = document.form1.tel.value;
+  fl = document.form1.gender.value;
+  var nm1 = document.form1.onoma;
+  ep1 = document.form1.epitheto;
+  em1 = document.form1.email;
+  er1 = document.form1.erotima;
+
+  if (nm === "", ep === "", em === "", er === "") {
+    alert("Please fill all the necessary fields!");
+    return false;
+  } else {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById('form_name').innerHTML = nm;
+    document.getElementById('form_surname').innerHTML = ep;
+    document.getElementById('form_phone').innerHTML = tel;
+    document.getElementById('form_email').innerHTML = em;
+    document.getElementById('form_fylo').innerHTML = fl;
+    document.getElementById('form_erotima').innerHTML = er;
+   } }
+function send_msg() {
+  var nm1 = document.form1.onoma;
+  ep1 = document.form1.epitheto;
+  em1 = document.form1.email;
+  er1 = document.form1.erotima;
+  window.open('mailto:' + em1.value + '?subject=Αυτόματη Φόρμα Επικοινωνίας&body=Ονομα: ' + nm1.value +
+    '%0AΕπίθετο: ' + ep1.value + '%0AΕmail: ' + em1.value + '%0A%0AΑίτημα: ' + er1.value + '%0A%0A');
+  return true;
+}
+function cancel_msg() {
+  document.getElementById("popup").style.display = "none";
+  return false;
+}
+</script>
+</html>

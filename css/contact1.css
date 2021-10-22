@@ -1,0 +1,64 @@
+body {
+  margin:0;
+}
+form {
+  padding: 10px 10px;
+  border: 2px solid red;
+  background-color: white;
+  text-align: left;
+  width: 45%;
+}
+legend {
+text-align: center;
+font-size: 20px;
+}
+.sentemail,.location,.timetable,.tel {
+  padding-left: 35%;
+}
+.sentemail{
+  padding-bottom: 2%;
+}
+.in1{
+ margin-left: 3.8%;
+}
+.in3{
+ margin-left: 9%;
+}
+.in4{
+ margin-left: 3.8%;
+}
+/* top buttons CSS */
+.topnav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 27px;
+  text-decoration: none;
+  font-size: 25px;
+  border-bottom: 5px solid transparent;
+}
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+.topnav a.active {
+  border-bottom: 3px solid red;
+}
+/*popup CSS */
+#popup{
+  display:none;
+  position:absolute;
+  background-color:white;
+  top:30px;left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:600px;
+  padding:20px;
+  font-size:18px;
+  border: 2px solid red;
+}

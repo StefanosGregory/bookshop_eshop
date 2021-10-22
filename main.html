@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <title>Book Store</title>
+    <link rel="stylesheet"  href="css/main1.css">
+  </head>
+<body background="backgrounds/main.jpg">
+<div class="topnav">
+  <a class="active">Home</a>
+  <a href="http://localhost/Π18178/buy1.php">Buy A Product</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
+  <a href="http://localhost/Π18178/login.php">Login</a>
+  <font  face = "Comic Sans MS" size = "+4" >Welcome to our bookstore</font>
+</div>
+<h2>Best Books for 2018!</h2>
+<div class="divs1" >
+  <img class="slideshow1" src="books/stars.jpg">
+  <img class="slideshow1" src="books/help.jpg">
+  <img class="slideshow1" src="books/hunger.jpg">
+  <img class="slideshow1" src="books/light.jpg">
+  <img class="slideshow1" src="books/tattoo.jpg">
+  <img class="slideshow1" src="books/thief.jpg">
+  <p class="ps1" ><sup>*</sup>All the books you can find it in the page Products<sub>1</sub>.</p>
+</div>
+<div class="divs2">
+  <img class="slideshow2" src="comics/comic1.jpg">
+  <img class="slideshow2" src="comics/comic2.jpg">
+  <img class="slideshow2" src="comics/comic3.jpg">
+  <img class="slideshow2" src="comics/comic4.jpg">
+  <img class="slideshow2" src="comics/comic5.jpg">
+  <img class="slideshow2" src="comics/comic6.jpg">
+  <p class="ps2"><sup>*</sup>All the books you can find it in the page Products<sub>2</sub>.</p>
+</div>
+  <br><br>
+  <script>
+  var myIndex = 0;
+  slideshow();
+  function slideshow() {
+      var i;
+      var x = document.getElementsByClassName("slideshow1");
+      var y = document.getElementsByClassName("slideshow2");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+         y[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length & myIndex > y.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      y[myIndex-1].style.display = "block";
+      setTimeout(slideshow, 3000);
+    }
+  </script>
+</body>
+</html>
