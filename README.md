@@ -1,4 +1,4 @@
-# Website, eshop for bookstore company
+# Website, eshop for bookstore
 
 My first assignment on web technologies.  
 A simple 100% working website using:
